@@ -193,7 +193,8 @@
 
 ## ERD
 
-![Copy of ecommerce (2)](https://github.com/user-attachments/assets/27d79834-4ee2-4b4a-a553-9c6575532351)
+![Copy of ecommerce (2)](https://github.com/user-attachments/assets/84b4f738-c110-4817-9b8e-e41c26705794)
+
 
 
 
