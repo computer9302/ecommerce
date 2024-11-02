@@ -16,6 +16,6 @@ class EmailSendServiceTest {
     void sendEmail() {
         Response response = emailSendService.sendEmail();
 
-        assertEquals(200, response.g);
+        assertEquals(200, response.toString());
     }
 }
