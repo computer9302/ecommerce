@@ -1,5 +1,6 @@
 package com.zerobase.ecommerce.service;
 
+import com.zerobase.ecommerce.service.test.EmailSendService;
 import feign.Response;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

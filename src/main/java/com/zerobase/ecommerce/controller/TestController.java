@@ -1,7 +1,7 @@
 package com.zerobase.ecommerce.controller;
 
 
-import com.zerobase.ecommerce.service.EmailSendService;
+import com.zerobase.ecommerce.service.test.EmailSendService;
 import feign.Response;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

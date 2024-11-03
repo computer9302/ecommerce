@@ -1,7 +1,5 @@
 package com.zerobase.ecommerce;
 
-import com.zerobase.ecommerce.service.EmailSendService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
