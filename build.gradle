@@ -33,6 +33,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+    implementation 'mysql:mysql-connector-java'
     // https://mvnrepository.com/artifact/com.h2database/h2
     testImplementation group: 'com.h2database', name: 'h2', version: '2.2.224'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
@@ -41,6 +42,10 @@ dependencies {
 
     // https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java
     implementation group: 'io.github.cdimascio', name: 'dotenv-java', version: '3.0.0'
+
+
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-envers
+    implementation group: 'org.springframework.data', name: 'spring-data-envers', version: '3.3.4'
 
 
     compileOnly 'org.projectlombok:lombok'
