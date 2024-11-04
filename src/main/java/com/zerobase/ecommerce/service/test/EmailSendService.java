@@ -2,6 +2,7 @@ package com.zerobase.ecommerce.service.test;
 
 import com.zerobase.ecommerce.client.MailgunClient;
 import com.zerobase.ecommerce.client.mailgun.SendMailForm;
+import feign.Response;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class EmailSendService {
     private final MailgunClient mailgunClient;
 
-    public String sendEmail(){
+    public Response sendEmail(){
         SendMailForm form = SendMailForm.builder()
                 .from("zerobase-test@my.com")
                 .to("computer9302@gmail.com")
