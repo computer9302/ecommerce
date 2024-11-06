@@ -16,7 +16,7 @@ public class TestController {
     private final EmailSendService emailSendService;
 
     @GetMapping
-    public Response sendTestEmail(){
+    public String  sendTestEmail(){
         return emailSendService.sendEmail();
     }
 }

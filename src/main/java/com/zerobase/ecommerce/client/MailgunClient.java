@@ -3,6 +3,7 @@ package com.zerobase.ecommerce.client;
 import com.zerobase.ecommerce.client.mailgun.SendMailForm;
 import feign.QueryMap;
 import feign.Response;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.SpringQueryMap;
@@ -14,5 +15,5 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface MailgunClient {
 
     @PostMapping("sandbox09928027e4ca4be7bd1455e3392b0663.mailgun.org/messages")
-    ResponseEntity<Response> sendMail(@SpringQueryMap SendMailForm form);
+    ResponseEntity<String> sendEmail(@SpringQueryMap SendMailForm form);
 }
