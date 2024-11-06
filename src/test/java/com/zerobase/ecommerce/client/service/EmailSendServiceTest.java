@@ -1,6 +1,6 @@
-package com.zerobase.ecommerce.service;
+package com.zerobase.ecommerce.client.service;
 
-import com.zerobase.ecommerce.service.test.EmailSendService;
+import com.zerobase.ecommerce.service.EmailSendService;
 import feign.Response;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ class EmailSendServiceTest {
     private EmailSendService emailSendService;
     @Test
     void sendEmail() {
-        Response response = emailSendService.sendEmail();
+        String  response = emailSendService.sendEmail();
 
         assertEquals(200, response.toString());
     }

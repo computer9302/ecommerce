@@ -1,4 +1,4 @@
-package com.zerobase.ecommerce.service.test;
+package com.zerobase.ecommerce.service;
 
 import com.zerobase.ecommerce.client.MailgunClient;
 import com.zerobase.ecommerce.client.mailgun.SendMailForm;
