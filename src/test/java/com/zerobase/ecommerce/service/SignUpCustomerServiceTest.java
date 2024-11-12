@@ -30,7 +30,7 @@ class SignUpCustomerServiceTest {
         // when : 실제로 멤버를 저장
         Customer c = service.signUp(form);
 
-        // then : 멤버가 잘 추가되었는지 확인!
+        // then : 멤버가 잘 추가되었는지 확인!!!!
         Assertions.assertNotNull(c.getId());
         Assertions.assertNotNull(c.getCreatedAt());
     }

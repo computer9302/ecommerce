@@ -21,7 +21,6 @@ public class ExceptionController {
         return ResponseEntity.badRequest().body(new ExceptionResponse(c.getMessage(), c.getErrorCode().getHttpStatus()));
     }
 
-
     @Getter
     @ToString
     @AllArgsConstructor
