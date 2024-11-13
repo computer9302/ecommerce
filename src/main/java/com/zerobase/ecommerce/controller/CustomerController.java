@@ -2,13 +2,11 @@ package com.zerobase.ecommerce.controller;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.domain.domain.common.UserVo;
-import com.zerobase.domain.util.Aes256Util;
 import com.zerobase.ecommerce.domain.customer.CustomerDto;
 import com.zerobase.ecommerce.domain.model.Customer;
-import com.zerobase.ecommerce.domain.repository.CustomerRepository;
 import com.zerobase.ecommerce.exceiption.CustomException;
 import com.zerobase.ecommerce.exceiption.ErrorCode;
-import com.zerobase.ecommerce.service.CustomerService;
+import com.zerobase.ecommerce.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -2,7 +2,7 @@ package com.zerobase.ecommerce.config.filter;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.domain.domain.common.UserVo;
-import com.zerobase.ecommerce.service.CustomerService;
+import com.zerobase.ecommerce.service.customer.CustomerService;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;

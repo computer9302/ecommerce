@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -31,7 +32,10 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/v2/api-docs", "/v3/api-docs", "/v3/api-docs/**", "/swagger-resources",
                                 "/swagger-resources/**", "/configuration/ui", "/configuration/security", "/swagger-ui/**",
-                                "/webjars/**", "/swagger-ui/index.html", "/auth", "/signup", "signup/verify/customer", "signIn/customer"
+                                "/webjars/**", "/swagger-ui/index.html", "/auth"
+                                , "/signup", "/signup/customer", "/signup/customer/verify*", "/signup/customer/verify/**"
+                                ,"/signup/seller", "/signup/seller/verify*", "/signup/seller/verify/**"
+                                , "signIn/customer", "signIn/seller"
                                 , "customer/getInfo"// 수정된 부분
                         ).permitAll()  // Swagger 및 정적 리소스에 대한 접근 허용
                         .anyRequest().authenticated() // 나머지 요청은 인증 필요

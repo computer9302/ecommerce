@@ -1,4 +1,4 @@
-package com.zerobase.ecommerce.service;
+package com.zerobase.ecommerce.service.customer;
 
 import com.zerobase.ecommerce.domain.model.Customer;
 import com.zerobase.ecommerce.domain.repository.CustomerRepository;
