@@ -25,10 +25,15 @@ public class CustomerFilter implements Filter {
         if (!jwtAuthenticationProvider.validateToken(token)){
             throw new ServletException("Invalid Access");
         }
-        UserVo vo = jwtAuthenticationProvider.getUserVo(token);
+        UserVo vo = null;
+        try {
+            vo = jwtAuthenticationProvider.getUserVo(token);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
         customerService.findByIdAndEmail(vo.getId(), vo.getEmail()).orElseThrow(
                 ()->new ServletException("Invalid access")
         );
-
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 }
