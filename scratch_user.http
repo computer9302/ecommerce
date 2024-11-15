@@ -1,0 +1,35 @@
+### 회원가입 (고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "email": "computer9302@gmail.com",
+  "name": "ParkJunYoung",
+  "password": "pw",
+  "birth": "2024-11-15",
+  "phone": "01000000000"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify?email=pronova@naver.com&code=DZWCGHPHGz
+
+### 로그인 (고객)
+POST http://localhost:8081/signin/customer
+Content-Type: application/json
+
+{
+  "email": "pronova@naver.com",
+  "password": "pw"
+}
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2TUxSQVBWbm9hUG1HOFV4aFVsMm5DbW9OWVlwbEhidEtYcU9veURxTHprPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MzE2Mzk5MjgsImV4cCI6MTczMTcyNjMyOH0.PqE_SDKqzKGI1gTlxfJ3xlT1CJdb2_J6RXaaKU1oW-E
+
+#############################
+
+### 회원가입 (셀러)
+
+### 로그인 (셀러)
+

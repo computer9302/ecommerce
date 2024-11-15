@@ -35,7 +35,7 @@ public class SecurityConfig {
                                 "/webjars/**", "/swagger-ui/index.html", "/auth"
                                 , "/signup", "/signup/customer", "/signup/customer/verify*", "/signup/customer/verify/**"
                                 ,"/signup/seller", "/signup/seller/verify*", "/signup/seller/verify/**"
-                                , "signIn/customer", "signIn/seller"
+                                , "signin/customer", "signin/seller"
                                 , "customer/getInfo"// 수정된 부분
                         ).permitAll()  // Swagger 및 정적 리소스에 대한 접근 허용
                         .anyRequest().authenticated() // 나머지 요청은 인증 필요
