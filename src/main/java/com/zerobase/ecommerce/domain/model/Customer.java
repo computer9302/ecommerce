@@ -22,11 +22,18 @@ public class Customer extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+    @Column(unique = true, length = 254)
     private String email;
-    private String name;
+    @Column(length = 128)
     private String password;
+    @Column(length = 128)
+    private String password2;
+    @Column(length = 50)
+    private String name;
+    @Column(length = 11)
     private String phone;
+    @Column(length = 150)
+    private String deliveryAddress;
     private LocalDate birth;
 
     private LocalDateTime verifyExpiredAt;
@@ -37,9 +44,11 @@ public class Customer extends BaseEntity{
          return Customer.builder()
                  .email(form.getEmail().toLowerCase(Locale.ROOT))
                  .password(form.getPassword())
+                 .password2(form.getPassword2())
                  .name(form.getName())
-                 .birth(form.getBirth())
                  .phone(form.getPhone())
+                 .deliveryAddress(form.getDeliveryAddress())
+                 .birth(form.getBirth())
                  .verify(false)
                  .build();
     }

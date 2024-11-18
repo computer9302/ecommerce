@@ -33,6 +33,9 @@ public class Product extends BaseEntity{
     @JoinColumn(name = "product_id")
     private List<ProductItem> productItems = new ArrayList<>();
 
+   // @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+   // private List<Product_Image> images;
+
     public static Product of(Long sellerId, AddProductForm form){
         return Product.builder()
                 .sellerId(sellerId)
@@ -40,6 +43,7 @@ public class Product extends BaseEntity{
                 .description(form.getDescription())
                 .productItems(form.getItems().stream()
                         .map(piFrom->ProductItem.of(sellerId, piFrom)).collect(Collectors.toList()))
+                //.images(form.getImageUrl())
                 .build();
 
 

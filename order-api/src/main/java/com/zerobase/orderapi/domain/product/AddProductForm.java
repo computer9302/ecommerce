@@ -16,5 +16,6 @@ public class AddProductForm {
     private String name;
     private String description;
     private List<AddProductItemForm> items;
+   // private List<String> imageUrl;
 
 }
